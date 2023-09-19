@@ -11,6 +11,10 @@
 		E68F4B412AB4799E0091B592 /* EssentialFeedMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E68F4B362AB4799E0091B592 /* EssentialFeedMacOS.framework */; };
 		E68F4B462AB4799E0091B592 /* EssentialFeedMacOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68F4B452AB4799E0091B592 /* EssentialFeedMacOSTests.swift */; };
 		E68F4B472AB4799E0091B592 /* EssentialFeedMacOS.h in Headers */ = {isa = PBXBuildFile; fileRef = E68F4B392AB4799E0091B592 /* EssentialFeedMacOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E68F4B532AB5F8A40091B592 /* LoadFeedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68F4B512AB5F8A40091B592 /* LoadFeedResult.swift */; };
+		E68F4B542AB5F8A40091B592 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68F4B522AB5F8A40091B592 /* FeedItem.swift */; };
+		E68F4B582AB5F9C80091B592 /* RemoteFeedLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68F4B572AB5F9C80091B592 /* RemoteFeedLoaderTests.swift */; };
+		E68F4B5B2AB9D5020091B592 /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68F4B5A2AB9D5020091B592 /* RemoteFeedLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		E68F4B3A2AB4799E0091B592 /* EssentialFeedMacOS.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = EssentialFeedMacOS.docc; sourceTree = "<group>"; };
 		E68F4B402AB4799E0091B592 /* EssentialFeedMacOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedMacOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E68F4B452AB4799E0091B592 /* EssentialFeedMacOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedMacOSTests.swift; sourceTree = "<group>"; };
+		E68F4B512AB5F8A40091B592 /* LoadFeedResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadFeedResult.swift; sourceTree = "<group>"; };
+		E68F4B522AB5F8A40091B592 /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		E68F4B572AB5F9C80091B592 /* RemoteFeedLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoaderTests.swift; sourceTree = "<group>"; };
+		E68F4B5A2AB9D5020091B592 /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,8 @@
 		E68F4B382AB4799E0091B592 /* EssentialFeedMacOS */ = {
 			isa = PBXGroup;
 			children = (
+				E68F4B502AB5F8940091B592 /* FeedFeature */,
+				E68F4B592AB9D4CF0091B592 /* Feed API */,
 				E68F4B392AB4799E0091B592 /* EssentialFeedMacOS.h */,
 				E68F4B3A2AB4799E0091B592 /* EssentialFeedMacOS.docc */,
 			);
@@ -81,8 +91,26 @@
 			isa = PBXGroup;
 			children = (
 				E68F4B452AB4799E0091B592 /* EssentialFeedMacOSTests.swift */,
+				E68F4B572AB5F9C80091B592 /* RemoteFeedLoaderTests.swift */,
 			);
 			path = EssentialFeedMacOSTests;
+			sourceTree = "<group>";
+		};
+		E68F4B502AB5F8940091B592 /* FeedFeature */ = {
+			isa = PBXGroup;
+			children = (
+				E68F4B522AB5F8A40091B592 /* FeedItem.swift */,
+				E68F4B512AB5F8A40091B592 /* LoadFeedResult.swift */,
+			);
+			path = FeedFeature;
+			sourceTree = "<group>";
+		};
+		E68F4B592AB9D4CF0091B592 /* Feed API */ = {
+			isa = PBXGroup;
+			children = (
+				E68F4B5A2AB9D5020091B592 /* RemoteFeedLoader.swift */,
+			);
+			path = "Feed API";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,7 +222,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E68F4B5B2AB9D5020091B592 /* RemoteFeedLoader.swift in Sources */,
+				E68F4B532AB5F8A40091B592 /* LoadFeedResult.swift in Sources */,
 				E68F4B3B2AB4799E0091B592 /* EssentialFeedMacOS.docc in Sources */,
+				E68F4B542AB5F8A40091B592 /* FeedItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E68F4B582AB5F9C80091B592 /* RemoteFeedLoaderTests.swift in Sources */,
 				E68F4B462AB4799E0091B592 /* EssentialFeedMacOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +433,7 @@
 		E68F4B4E2AB4799E0091B592 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 448W6TL3PT;
@@ -416,6 +449,7 @@
 		E68F4B4F2AB4799E0091B592 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 448W6TL3PT;
