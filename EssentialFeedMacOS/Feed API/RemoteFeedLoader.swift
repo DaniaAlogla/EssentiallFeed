@@ -9,8 +9,9 @@ import Foundation
 
 public enum HTTPClientResult{
     case success(Data, HTTPURLResponse)
-    case faliure(Error)
+    case failure(Error)
 }
+
 
 public protocol HTTPClient{
     func get(from url:URL , completion: @escaping (HTTPClientResult) -> Void)
@@ -27,13 +28,13 @@ public final class RemoteFeedLoader {
     }
     
     
-    public func load(completion: @escaping (Error) -> Void){
+    public func load(completion: @escaping (Result) -> Void){
         client.get(from: url) { result in
             switch result{
             case .success:
-                completion(.invalidData)
-            case .faliure:
-                completion(.connectivity)
+                completion(.failure(.invalidData))
+            case .failure:
+                completion(.failure(.connectivity))
             }
         }
     }
@@ -41,6 +42,11 @@ public final class RemoteFeedLoader {
     public enum Error: Swift.Error {
         case connectivity
         case invalidData
+    }
+    
+    public enum Result: Equatable{
+        case success([FeedItem])
+        case failure(RemoteFeedLoader.Error)
     }
     
     
