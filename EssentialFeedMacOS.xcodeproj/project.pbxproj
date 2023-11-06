@@ -18,6 +18,7 @@
 		E68F4B542AB5F8A40091B592 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68F4B522AB5F8A40091B592 /* FeedItem.swift */; };
 		E68F4B582AB5F9C80091B592 /* RemoteFeedLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68F4B572AB5F9C80091B592 /* RemoteFeedLoaderTests.swift */; };
 		E68F4B5B2AB9D5020091B592 /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68F4B5A2AB9D5020091B592 /* RemoteFeedLoader.swift */; };
+		E6B3227D2AF8D0890055AF3D /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68F4B5A2AB9D5020091B592 /* RemoteFeedLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -240,6 +241,7 @@
 				E68F4B462AB4799E0091B592 /* EssentialFeedMacOSTests.swift in Sources */,
 				E62FDD7E2AE6C1EE006DA8B6 /* LoadFeedResult.swift in Sources */,
 				E62FDD802AE6C212006DA8B6 /* EssentialFeedMacOS.docc in Sources */,
+				E6B3227D2AF8D0890055AF3D /* RemoteFeedLoader.swift in Sources */,
 				E62FDD7D2AE6C1EB006DA8B6 /* FeedItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

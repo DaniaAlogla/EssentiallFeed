@@ -82,6 +82,49 @@ class RemoteFeedLoaderTests : XCTestCase {
         })
 
     }
+    
+    // Happy path
+    func test_load_deliversItemsOn200HTTPResponseWithJOSNItems(){
+        let (sut, client) = makeSUT()
+        
+        let item1 = FeedItem(id: UUID(),
+                             description: nil,
+                             location: nil,
+                             imageURL: URL(string: "http://a-url")!)
+        
+        
+        let itemJOSN = [
+            "id": item1.id.uuidString,
+            "image": item1.imageURL.absoluteString
+        ]
+        
+        let item2 = FeedItem(id: UUID(),
+                             description: "a description",
+                             location: "a location",
+                             imageURL: URL(string: "http://a-url")!)
+                             
+                             
+        let item2JOSN = [
+            "id": item2.id.uuidString,
+            "description": item2.description,
+            "location": item2.location,
+            "image": item2.imageURL.absoluteString
+        ]
+        
+        let itemsJOSN = [
+            "items": [itemJOSN,item2JOSN]
+        ]
+        
+        var items = [FeedItem]()
+        items.append(item1)
+        items.append(item2)
+        
+        expect(sut, toCompleteWith: .success(items), when: {
+            let josn = try! JSONSerialization.data(withJSONObject: itemsJOSN)
+            client.complete(withStatusCode: 200,data: josn)
+        })
+        
+    }
     // Helpers
     
 
