@@ -10,6 +10,8 @@
 		E62FDD7D2AE6C1EB006DA8B6 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68F4B522AB5F8A40091B592 /* FeedItem.swift */; };
 		E62FDD7E2AE6C1EE006DA8B6 /* LoadFeedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68F4B512AB5F8A40091B592 /* LoadFeedResult.swift */; };
 		E62FDD802AE6C212006DA8B6 /* EssentialFeedMacOS.docc in Sources */ = {isa = PBXBuildFile; fileRef = E68F4B3A2AB4799E0091B592 /* EssentialFeedMacOS.docc */; };
+		E67800A62B0581690067280C /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67800A52B0581690067280C /* HTTPClient.swift */; };
+		E67800A72B0582010067280C /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67800A52B0581690067280C /* HTTPClient.swift */; };
 		E68F4B3B2AB4799E0091B592 /* EssentialFeedMacOS.docc in Sources */ = {isa = PBXBuildFile; fileRef = E68F4B3A2AB4799E0091B592 /* EssentialFeedMacOS.docc */; };
 		E68F4B412AB4799E0091B592 /* EssentialFeedMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E68F4B362AB4799E0091B592 /* EssentialFeedMacOS.framework */; };
 		E68F4B462AB4799E0091B592 /* EssentialFeedMacOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68F4B452AB4799E0091B592 /* EssentialFeedMacOSTests.swift */; };
@@ -32,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E67800A52B0581690067280C /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HTTPClient.swift; path = "EssentialFeedMacOS/Feed API/HTTPClient.swift"; sourceTree = SOURCE_ROOT; };
 		E68F4B362AB4799E0091B592 /* EssentialFeedMacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeedMacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E68F4B392AB4799E0091B592 /* EssentialFeedMacOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EssentialFeedMacOS.h; sourceTree = "<group>"; };
 		E68F4B3A2AB4799E0091B592 /* EssentialFeedMacOS.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = EssentialFeedMacOS.docc; sourceTree = "<group>"; };
@@ -40,7 +43,7 @@
 		E68F4B512AB5F8A40091B592 /* LoadFeedResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadFeedResult.swift; sourceTree = "<group>"; };
 		E68F4B522AB5F8A40091B592 /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		E68F4B572AB5F9C80091B592 /* RemoteFeedLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoaderTests.swift; sourceTree = "<group>"; };
-		E68F4B5A2AB9D5020091B592 /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
+		E68F4B5A2AB9D5020091B592 /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RemoteFeedLoader.swift; path = "EssentialFeedMacOS/Feed API/RemoteFeedLoader.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				E68F4B5A2AB9D5020091B592 /* RemoteFeedLoader.swift */,
+				E67800A52B0581690067280C /* HTTPClient.swift */,
 			);
 			path = "Feed API";
 			sourceTree = "<group>";
@@ -227,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E68F4B5B2AB9D5020091B592 /* RemoteFeedLoader.swift in Sources */,
+				E67800A62B0581690067280C /* HTTPClient.swift in Sources */,
 				E68F4B532AB5F8A40091B592 /* LoadFeedResult.swift in Sources */,
 				E68F4B3B2AB4799E0091B592 /* EssentialFeedMacOS.docc in Sources */,
 				E68F4B542AB5F8A40091B592 /* FeedItem.swift in Sources */,
@@ -240,6 +245,7 @@
 				E68F4B582AB5F9C80091B592 /* RemoteFeedLoaderTests.swift in Sources */,
 				E68F4B462AB4799E0091B592 /* EssentialFeedMacOSTests.swift in Sources */,
 				E62FDD7E2AE6C1EE006DA8B6 /* LoadFeedResult.swift in Sources */,
+				E67800A72B0582010067280C /* HTTPClient.swift in Sources */,
 				E62FDD802AE6C212006DA8B6 /* EssentialFeedMacOS.docc in Sources */,
 				E6B3227D2AF8D0890055AF3D /* RemoteFeedLoader.swift in Sources */,
 				E62FDD7D2AE6C1EB006DA8B6 /* FeedItem.swift in Sources */,
