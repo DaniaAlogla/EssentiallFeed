@@ -22,19 +22,15 @@ public final class RemoteFeedLoader {
     public func load(completion: @escaping (Result) -> Void){
         client.get(from: url) { result in
             switch result{
-            case let .success(data, response ):
-                do {
-                    let items = try FeedItemMapper.map(data, response)
-                    completion(.success(items))
-                } catch {
-                    completion(.failure(.invalidData))
-                }
-                
+            case let .success(data, response):
+                completion(FeedItemMapper.map(data, from: response))
             case .failure:
                 completion(.failure(.connectivity))
             }
         }
     }
+    
+    
     
     public enum Error: Swift.Error {
         case connectivity
