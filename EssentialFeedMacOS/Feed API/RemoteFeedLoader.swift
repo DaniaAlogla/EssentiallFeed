@@ -37,11 +37,8 @@ public final class RemoteFeedLoader {
         case connectivity
         case invalidData
     }
+    public typealias Result = LoadFeedResult<Error>
     
-    public enum Result: Equatable{
-        case success([FeedItem])
-        case failure(RemoteFeedLoader.Error)
-    }
     
     
 }
