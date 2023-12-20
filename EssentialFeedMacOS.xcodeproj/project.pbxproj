@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E62FDD802AE6C212006DA8B6 /* EssentialFeedMacOS.docc in Sources */ = {isa = PBXBuildFile; fileRef = E68F4B3A2AB4799E0091B592 /* EssentialFeedMacOS.docc */; };
 		E65054482B2F0D5600CC34D2 /* URLSessionsHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65054472B2F0D5600CC34D2 /* URLSessionsHTTPClientTests.swift */; };
+		E650548D2B333BE100CC34D2 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E650548C2B333BE100CC34D2 /* XCTestCase+MemoryLeakTracking.swift */; };
 		E67800A62B0581690067280C /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67800A52B0581690067280C /* HTTPClient.swift */; };
 		E67800A92B05826F0067280C /* FeedItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67800A82B05826F0067280C /* FeedItemsMapper.swift */; };
 		E68F4B3B2AB4799E0091B592 /* EssentialFeedMacOS.docc in Sources */ = {isa = PBXBuildFile; fileRef = E68F4B3A2AB4799E0091B592 /* EssentialFeedMacOS.docc */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		E65054472B2F0D5600CC34D2 /* URLSessionsHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionsHTTPClientTests.swift; sourceTree = "<group>"; };
+		E650548C2B333BE100CC34D2 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		E67800A52B0581690067280C /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HTTPClient.swift; path = "EssentialFeedMacOS/Feed API/HTTPClient.swift"; sourceTree = SOURCE_ROOT; };
 		E67800A82B05826F0067280C /* FeedItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemsMapper.swift; sourceTree = "<group>"; };
 		E68F4B362AB4799E0091B592 /* EssentialFeedMacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeedMacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,9 +65,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E650548B2B333B9800CC34D2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E650548C2B333BE100CC34D2 /* XCTestCase+MemoryLeakTracking.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		E67800AB2B058C000067280C /* Feed API */ = {
 			isa = PBXGroup;
 			children = (
+				E650548B2B333B9800CC34D2 /* Helpers */,
 				E68F4B572AB5F9C80091B592 /* RemoteFeedLoaderTests.swift */,
 				E65054472B2F0D5600CC34D2 /* URLSessionsHTTPClientTests.swift */,
 			);
@@ -251,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E65054482B2F0D5600CC34D2 /* URLSessionsHTTPClientTests.swift in Sources */,
+				E650548D2B333BE100CC34D2 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				E68F4B582AB5F9C80091B592 /* RemoteFeedLoaderTests.swift in Sources */,
 				E62FDD802AE6C212006DA8B6 /* EssentialFeedMacOS.docc in Sources */,
 			);
