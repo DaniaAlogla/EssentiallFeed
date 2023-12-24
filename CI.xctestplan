@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "7652C94A-75D4-4AC5-BEB5-7515355D375C",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:EssentialFeedMacOS.xcodeproj",
+        "identifier" : "E650549B2B381F2F00CC34D2",
+        "name" : "EssentialFeedAPIEndToEndTests"
+      }
+    }
+  ],
+  "version" : 1
+}
