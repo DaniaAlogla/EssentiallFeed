@@ -9,7 +9,16 @@
     }
   ],
   "defaultOptions" : {
-    "codeCoverage" : false
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:EssentialFeedMacOS.xcodeproj",
+          "identifier" : "E68F4B352AB4799E0091B592",
+          "name" : "EssentialFeedMacOS"
+        }
+      ]
+    },
+    "testExecutionOrdering" : "random"
   },
   "testTargets" : [
     {
@@ -17,6 +26,13 @@
         "containerPath" : "container:EssentialFeedMacOS.xcodeproj",
         "identifier" : "E650549B2B381F2F00CC34D2",
         "name" : "EssentialFeedAPIEndToEndTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:EssentialFeedMacOS.xcodeproj",
+        "identifier" : "E68F4B3F2AB4799E0091B592",
+        "name" : "EssentialFeedMacOSTests"
       }
     }
   ],
