@@ -59,6 +59,7 @@
 		E68F4B522AB5F8A40091B592 /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		E68F4B572AB5F9C80091B592 /* RemoteFeedLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoaderTests.swift; sourceTree = "<group>"; };
 		E68F4B5A2AB9D5020091B592 /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
+		E6DEBDD12B39B3A200593012 /* EssentialFeedMacOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialFeedMacOS.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +118,7 @@
 		E68F4B2C2AB4799E0091B592 = {
 			isa = PBXGroup;
 			children = (
+				E6DEBDD12B39B3A200593012 /* EssentialFeedMacOS.xctestplan */,
 				E65054A72B382C9700CC34D2 /* CI.xctestplan */,
 				E68F4B382AB4799E0091B592 /* EssentialFeedMacOS */,
 				E68F4B442AB4799E0091B592 /* EssentialFeedMacOSTests */,
