@@ -107,10 +107,6 @@ Given the customer doesn't have connectivity
 
 #### Primary course (happy path):
 1. Execute "Save Feed Items" command with above data.
-2. System encodes feed items.
-3. System timestamps the new cache.
-4. System replaces the cache with new data.
-5. System delivers success message.
 2. System deletes old cache data.
 3. System encodes feed items.
 4. System timestamps the new cache.
