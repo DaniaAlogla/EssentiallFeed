@@ -127,7 +127,7 @@ class CodableFeedStoreTests: XCTestCase {
         expect(sut, toRetrieveTwice: .found(feed: feed, timestamp: timestamp))
     }
     
-    func test_retotrieve_deliversFailureOnRetrievalError(){
+    func test_retrieve_deliversFailureOnRetrievalError(){
         let storeURL = testSpecificStoreURL()
         let sut = makeSUT(storeURL: storeURL)
         
