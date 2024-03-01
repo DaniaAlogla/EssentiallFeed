@@ -208,7 +208,7 @@ class CodableFeedStoreTests: XCTestCase {
     }
     
     @discardableResult
-    private func insert(_ cache: (feed: [LocalFeedImage], timestamp: Date), to sut: CodableFeedStore) -> Error? {
+    private func insert(_ cache: (feed: [LocalFeedImage], timestamp: Date), to sut: FeedStore) -> Error? {
         let exp = expectation(description: "Wait for cache retrival")
         var insertionError: Error?
         sut.insert(cache.feed, timestamp: cache.timestamp) { reveivedInsertionError in
@@ -219,7 +219,7 @@ class CodableFeedStoreTests: XCTestCase {
         return insertionError
     }
     
-    private func deleteCache(from sut: CodableFeedStore) -> Error? {
+    private func deleteCache(from sut: FeedStore) -> Error? {
         let exp = expectation(description: "Wait for cache deletion")
         var deletionError: Error?
         sut.deleteCachedFeed { receivedDeletionError in
@@ -230,12 +230,12 @@ class CodableFeedStoreTests: XCTestCase {
         return deletionError
     }
     
-    private func expect(_ sut : CodableFeedStore, toRetrieveTwice expectedResult: RetrivedCachedFeedResult, file: StaticString = #file , line : UInt = #line) {
+    private func expect(_ sut : FeedStore, toRetrieveTwice expectedResult: RetrivedCachedFeedResult, file: StaticString = #file , line : UInt = #line) {
         expect(sut, toRetrieve: expectedResult)
         expect(sut, toRetrieve: expectedResult)
     }
     
-    private func expect(_ sut : CodableFeedStore, toRetrieve expectedResult: RetrivedCachedFeedResult, file: StaticString = #file , line : UInt = #line) {
+    private func expect(_ sut : FeedStore, toRetrieve expectedResult: RetrivedCachedFeedResult, file: StaticString = #file , line : UInt = #line) {
         let exp = expectation(description: "Wait for cache retrieval")
         
         sut.retrieve{ retrieveResult in
