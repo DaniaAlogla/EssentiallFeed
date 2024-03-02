@@ -8,6 +8,24 @@
 import XCTest
 import EssentialFeedMacOS
 
+protocol FeedStoreSepcs {
+    func test_retrieve_deliversEmptyOnEmptyCache()
+    func test_retrieve_hasNoSideEffectsOnEmptyCache()
+    func test_retrieve_deliversFoundValuesOnNonEmptyCache()
+    func test_retrieve_hasNoSideEffectsOnNonEmptyCache()
+    func test_retrieve_deliversFailureOnRetrievalError()
+    func test_retrieve_hasNoSideEffectsOnFailure()
+
+    func test_insert_overridesPreviouslyInsertedCacheValues()
+    func test_insert_deliversErrorOnInsertionError()
+
+    func test_delete_hasNoSideEffectsOnEmptyCache()
+    func test_delete_emptiesPreviouslyInsertedCache()
+    func test_delete_deliversErrorOnDeletionError()
+
+    func test_storeSideEffects_runSerially()
+}
+
 class CodableFeedStoreTests: XCTestCase {
     
     override func setUp()  {
@@ -61,7 +79,7 @@ class CodableFeedStoreTests: XCTestCase {
         expect(sut, toRetrieve: .failure(anyNSError()))
     }
     
-    func test_retotrieve_hasNoSideEffectsOnFailure(){
+    func test_retrieve_hasNoSideEffectsOnFailure(){
         let storeURL = testSpecificStoreURL()
         let sut = makeSUT(storeURL: storeURL)
         
