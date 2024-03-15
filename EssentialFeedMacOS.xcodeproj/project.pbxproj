@@ -15,6 +15,7 @@
 		E62FDD802AE6C212006DA8B6 /* EssentialFeedMacOS.docc in Sources */ = {isa = PBXBuildFile; fileRef = E68F4B3A2AB4799E0091B592 /* EssentialFeedMacOS.docc */; };
 		E63A037C2BA495FD00B8B8FC /* CoreDataFeedStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63A037B2BA495FD00B8B8FC /* CoreDataFeedStoreTests.swift */; };
 		E63A037E2BA4969D00B8B8FC /* CoreDataFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63A037D2BA4969D00B8B8FC /* CoreDataFeedStore.swift */; };
+		E63A039B2BA4F11400B8B8FC /* FeedStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E63A03992BA4F11300B8B8FC /* FeedStore.xcdatamodeld */; };
 		E65054482B2F0D5600CC34D2 /* URLSessionsHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65054472B2F0D5600CC34D2 /* URLSessionsHTTPClientTests.swift */; };
 		E650548D2B333BE100CC34D2 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E650548C2B333BE100CC34D2 /* XCTestCase+MemoryLeakTracking.swift */; };
 		E65054902B34440D00CC34D2 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E650548E2B34440100CC34D2 /* URLSessionHTTPClient.swift */; };
@@ -70,6 +71,7 @@
 		E6087EBF2B907675004AB5C7 /* CodableFeedStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFeedStoreTests.swift; sourceTree = "<group>"; };
 		E63A037B2BA495FD00B8B8FC /* CoreDataFeedStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedStoreTests.swift; sourceTree = "<group>"; };
 		E63A037D2BA4969D00B8B8FC /* CoreDataFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedStore.swift; sourceTree = "<group>"; };
+		E63A039A2BA4F11400B8B8FC /* FeedStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FeedStore.xcdatamodel; sourceTree = "<group>"; };
 		E65054472B2F0D5600CC34D2 /* URLSessionsHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionsHTTPClientTests.swift; sourceTree = "<group>"; };
 		E650548C2B333BE100CC34D2 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		E650548E2B34440100CC34D2 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				E673C4552B7FC4E600FC2098 /* LocalFeedImage.swift */,
 				E684987A2B9283CA00A54191 /* CodableFeedStore.swift */,
 				E63A037D2BA4969D00B8B8FC /* CoreDataFeedStore.swift */,
+				E63A03992BA4F11300B8B8FC /* FeedStore.xcdatamodeld */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E673C4562B7FC4E600FC2098 /* LocalFeedImage.swift in Sources */,
+				E63A039B2BA4F11400B8B8FC /* FeedStore.xcdatamodeld in Sources */,
 				E673C4522B7DFA5300FC2098 /* FeedStore.swift in Sources */,
 				E65054902B34440D00CC34D2 /* URLSessionHTTPClient.swift in Sources */,
 				E68F4B5B2AB9D5020091B592 /* RemoteFeedLoader.swift in Sources */,
@@ -776,6 +780,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E63A03992BA4F11300B8B8FC /* FeedStore.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E63A039A2BA4F11400B8B8FC /* FeedStore.xcdatamodel */,
+			);
+			currentVersion = E63A039A2BA4F11400B8B8FC /* FeedStore.xcdatamodel */;
+			name = FeedStore.xcdatamodeld;
+			path = "/Users/daniaalogla/Desktop/Developer/EssentialFeedMacOS/EssentialFeedMacOS/Feed Cache/FeedStore.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E68F4B2D2AB4799E0091B592 /* Project object */;
 }
