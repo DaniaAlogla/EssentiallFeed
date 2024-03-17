@@ -148,6 +148,15 @@
 			path = EssentialFeedAPIEndToEndTests;
 			sourceTree = "<group>";
 		};
+		E6602D782BA786390053E529 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				E63A03992BA4F11300B8B8FC /* FeedStore.xcdatamodeld */,
+				E63A037D2BA4969D00B8B8FC /* CoreDataFeedStore.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
 		E673C4482B7B495300FC2098 /* Feed Cache */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,8 +179,7 @@
 				E673C4512B7DFA5300FC2098 /* FeedStore.swift */,
 				E673C4552B7FC4E600FC2098 /* LocalFeedImage.swift */,
 				E684987A2B9283CA00A54191 /* CodableFeedStore.swift */,
-				E63A037D2BA4969D00B8B8FC /* CoreDataFeedStore.swift */,
-				E63A03992BA4F11300B8B8FC /* FeedStore.xcdatamodeld */,
+				E6602D782BA786390053E529 /* Infrastructure */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -788,8 +796,7 @@
 				E63A039A2BA4F11400B8B8FC /* FeedStore.xcdatamodel */,
 			);
 			currentVersion = E63A039A2BA4F11400B8B8FC /* FeedStore.xcdatamodel */;
-			name = FeedStore.xcdatamodeld;
-			path = "/Users/daniaalogla/Desktop/Developer/EssentialFeedMacOS/EssentialFeedMacOS/Feed Cache/FeedStore.xcdatamodeld";
+			path = FeedStore.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
