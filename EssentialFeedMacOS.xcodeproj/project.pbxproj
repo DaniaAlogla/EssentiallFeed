@@ -11,7 +11,6 @@
 		E6087E9B2B8B62F7004AB5C7 /* FeedCacheTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6087E9A2B8B62F7004AB5C7 /* FeedCacheTestHelpers.swift */; };
 		E6087E9D2B8B683E004AB5C7 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6087E9C2B8B683E004AB5C7 /* SharedTestHelpers.swift */; };
 		E6087E9F2B8CDF0C004AB5C7 /* FeedCachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6087E9E2B8CDF0C004AB5C7 /* FeedCachePolicy.swift */; };
-		E6087EC02B907675004AB5C7 /* CodableFeedStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6087EBF2B907675004AB5C7 /* CodableFeedStoreTests.swift */; };
 		E62FDD802AE6C212006DA8B6 /* EssentialFeedMacOS.docc in Sources */ = {isa = PBXBuildFile; fileRef = E68F4B3A2AB4799E0091B592 /* EssentialFeedMacOS.docc */; };
 		E638C9232BA9BC9100E8F1CC /* EssentialFeedMacOSCacheIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E638C9222BA9BC9100E8F1CC /* EssentialFeedMacOSCacheIntegrationTests.swift */; };
 		E638C9242BA9BC9100E8F1CC /* EssentialFeedMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E68F4B362AB4799E0091B592 /* EssentialFeedMacOS.framework */; };
@@ -39,7 +38,6 @@
 		E673C45B2B81E96100FC2098 /* FeedStoreSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E673C45A2B81E96100FC2098 /* FeedStoreSpy.swift */; };
 		E67800A62B0581690067280C /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67800A52B0581690067280C /* HTTPClient.swift */; };
 		E67800A92B05826F0067280C /* FeedItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67800A82B05826F0067280C /* FeedItemsMapper.swift */; };
-		E684987B2B9283CA00A54191 /* CodableFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E684987A2B9283CA00A54191 /* CodableFeedStore.swift */; };
 		E684987D2B93791200A54191 /* FeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E684987C2B93791200A54191 /* FeedStoreSpecs.swift */; };
 		E684987F2B9379AE00A54191 /* XCTestCase+FeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E684987E2B9379AE00A54191 /* XCTestCase+FeedStoreSpecs.swift */; };
 		E68498812B938E7600A54191 /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68498802B938E7600A54191 /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift */; };
@@ -83,7 +81,6 @@
 		E6087E9A2B8B62F7004AB5C7 /* FeedCacheTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCacheTestHelpers.swift; sourceTree = "<group>"; };
 		E6087E9C2B8B683E004AB5C7 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 		E6087E9E2B8CDF0C004AB5C7 /* FeedCachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCachePolicy.swift; sourceTree = "<group>"; };
-		E6087EBF2B907675004AB5C7 /* CodableFeedStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFeedStoreTests.swift; sourceTree = "<group>"; };
 		E638C9202BA9BC9100E8F1CC /* EssentialFeedMacOSCacheIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedMacOSCacheIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E638C9222BA9BC9100E8F1CC /* EssentialFeedMacOSCacheIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedMacOSCacheIntegrationTests.swift; sourceTree = "<group>"; };
 		E638C92A2BA9BCDE00E8F1CC /* EssentialFeedMacOSCacheIntegrationTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialFeedMacOSCacheIntegrationTests.xctestplan; sourceTree = "<group>"; };
@@ -108,7 +105,6 @@
 		E673C45A2B81E96100FC2098 /* FeedStoreSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoreSpy.swift; sourceTree = "<group>"; };
 		E67800A52B0581690067280C /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HTTPClient.swift; path = "EssentialFeedMacOS/Feed API/HTTPClient.swift"; sourceTree = SOURCE_ROOT; };
 		E67800A82B05826F0067280C /* FeedItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemsMapper.swift; sourceTree = "<group>"; };
-		E684987A2B9283CA00A54191 /* CodableFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFeedStore.swift; sourceTree = "<group>"; };
 		E684987C2B93791200A54191 /* FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoreSpecs.swift; sourceTree = "<group>"; };
 		E684987E2B9379AE00A54191 /* XCTestCase+FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedStoreSpecs.swift"; sourceTree = "<group>"; };
 		E68498802B938E7600A54191 /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FailableRetrieveFeedStoreSpecs.swift"; sourceTree = "<group>"; };
@@ -204,7 +200,6 @@
 				E673C44A2B7B499200FC2098 /* CacheFeedUseCaseTests.swift */,
 				E673C4572B81E7D900FC2098 /* LoadFeedFromCacheUseCaseTests.swift */,
 				E6087E982B8B5DA1004AB5C7 /* ValidateFeedCacheUseCaseTests.swift */,
-				E6087EBF2B907675004AB5C7 /* CodableFeedStoreTests.swift */,
 				E63A037B2BA495FD00B8B8FC /* CoreDataFeedStoreTests.swift */,
 				E68498862B938FEF00A54191 /* FeedStoreSpecs */,
 			);
@@ -218,7 +213,6 @@
 				E6087E9E2B8CDF0C004AB5C7 /* FeedCachePolicy.swift */,
 				E673C4512B7DFA5300FC2098 /* FeedStore.swift */,
 				E673C4552B7FC4E600FC2098 /* LocalFeedImage.swift */,
-				E684987A2B9283CA00A54191 /* CodableFeedStore.swift */,
 				E6602D782BA786390053E529 /* Infrastructure */,
 			);
 			path = "Feed Cache";
@@ -521,7 +515,6 @@
 				E6602D7C2BA786FF0053E529 /* ManagedCache.swift in Sources */,
 				E67800A92B05826F0067280C /* FeedItemsMapper.swift in Sources */,
 				E673C4542B7FC49A00FC2098 /* RemoteFeedItem.swift in Sources */,
-				E684987B2B9283CA00A54191 /* CodableFeedStore.swift in Sources */,
 				E6087E9F2B8CDF0C004AB5C7 /* FeedCachePolicy.swift in Sources */,
 				E68F4B3B2AB4799E0091B592 /* EssentialFeedMacOS.docc in Sources */,
 				E6602D7E2BA787230053E529 /* ManagedFeedImage.swift in Sources */,
@@ -535,7 +528,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E684987F2B9379AE00A54191 /* XCTestCase+FeedStoreSpecs.swift in Sources */,
-				E6087EC02B907675004AB5C7 /* CodableFeedStoreTests.swift in Sources */,
 				E65054482B2F0D5600CC34D2 /* URLSessionsHTTPClientTests.swift in Sources */,
 				E63A037C2BA495FD00B8B8FC /* CoreDataFeedStoreTests.swift in Sources */,
 				E650548D2B333BE100CC34D2 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
