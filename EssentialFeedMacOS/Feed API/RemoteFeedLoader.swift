@@ -44,7 +44,7 @@ public final class RemoteFeedLoader: FeedLoader {
         case connectivity
         case invalidData
     }
-    public typealias Result = LoadFeedResult
+    public typealias Result = FeedLoader.Result
     
 }
 
