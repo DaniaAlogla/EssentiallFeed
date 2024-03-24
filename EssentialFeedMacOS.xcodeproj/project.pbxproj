@@ -221,8 +221,8 @@
 		E673C4592B81E95A00FC2098 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				E673C45A2B81E96100FC2098 /* FeedStoreSpy.swift */,
 				E6087E9A2B8B62F7004AB5C7 /* FeedCacheTestHelpers.swift */,
+				E673C45A2B81E96100FC2098 /* FeedStoreSpy.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
