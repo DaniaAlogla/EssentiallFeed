@@ -37,7 +37,7 @@
                                             <rect key="frame" x="20" y="12" width="353" height="521"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="mEV-Hc-FxL" userLabel="Location Container">
-                                                    <rect key="frame" x="0.0" y="0.0" width="79" height="52.333333333333336"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="52.333333333333336"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1i-yp-olD" userLabel="Pin Container">
                                                             <rect key="frame" x="0.0" y="0.0" width="10" height="50"/>
@@ -56,8 +56,8 @@
                                                                 <constraint firstAttribute="width" constant="10" id="xGE-eV-QC2"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAT-W2-bYc">
-                                                            <rect key="frame" x="16" y="0.0" width="63" height="36"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAT-W2-bYc" userLabel="Location Label">
+                                                            <rect key="frame" x="16" y="0.0" width="337" height="36"/>
                                                             <string key="text">Location,
 Location </string>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -97,7 +97,7 @@ Location </string>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="RHc-Su-gY1" firstAttribute="width" secondItem="7FV-DJ-naq" secondAttribute="width" id="0z6-Mu-R2X"/>
-                                                <constraint firstItem="mEV-Hc-FxL" firstAttribute="width" secondItem="7FV-DJ-naq" secondAttribute="width" multiplier="0.223796" id="yvd-sZ-aKA"/>
+                                                <constraint firstItem="mEV-Hc-FxL" firstAttribute="width" secondItem="7FV-DJ-naq" secondAttribute="width" id="yvd-sZ-aKA"/>
                                             </constraints>
                                         </stackView>
                                     </subviews>
@@ -111,8 +111,8 @@ Location </string>
                                 <connections>
                                     <outlet property="descriptionLabel" destination="Egu-HF-QRL" id="E5g-Ht-9RJ"/>
                                     <outlet property="feedImageView" destination="E4A-T1-DIH" id="GWS-8f-jf7"/>
-                                    <outlet property="loactionLabel" destination="gAT-W2-bYc" id="L6Z-CP-LWR"/>
                                     <outlet property="locationContainer" destination="mEV-Hc-FxL" id="D6m-RR-4Yb"/>
+                                    <outlet property="locationLabel" destination="gAT-W2-bYc" id="WwF-9k-N26"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
