@@ -18,8 +18,13 @@ final class FeedViewController: UITableViewController {
         tableView.setContentOffset(CGPoint(x: 0, y: -tableView.contentInset.top), animated: false)
     }
     
-    @IBAction func refresh() {
+    override func viewIsAppearing(_ animated: Bool) {
+        super.viewIsAppearing(animated)
+        
         refreshControl?.beginRefreshing()
+    }
+    
+    @IBAction func refresh() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             if self.feed.isEmpty {
                 self.feed = FeedImageViewModel.prototypeFeed
