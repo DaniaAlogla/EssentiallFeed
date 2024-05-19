@@ -11,23 +11,28 @@ import EssentialFeed
 final public class FeedViewController: UITableViewController , UITableViewDataSourcePrefetching {
     
     private var viewAppeared = false
-    private var feedLoader: FeedLoader?
+    private var refreshController: FeedRefershViewController?
     private var imageLoader: FeedImageDataLoader?
-    private var tableModel = [FeedImage]()
+    private var tableModel = [FeedImage]() {
+        didSet { tableView.reloadData() }
+    }
     private var tasks = [IndexPath: FeedImageDataLoaderTask]()
     
     public convenience init(feedLoader: FeedLoader, imageLoader: FeedImageDataLoader) {
         self.init()
-        self.feedLoader = feedLoader
+        self.refreshController = FeedRefershViewController(feedLoader: feedLoader)
         self.imageLoader = imageLoader
     }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        prepareForFirstAppearance()
+        refreshControl = refreshController?.view
+        refreshController?.onRefresh = { [weak self] feed in
+            self?.tableModel = feed
+        }
         tableView.prefetchDataSource = self
-        load()
+        refreshController?.refresh()
     }
     
     public override func viewIsAppearing(_ animated: Bool) {
@@ -37,26 +42,6 @@ final public class FeedViewController: UITableViewController , UITableViewDataSo
             refreshControl?.beginRefreshing()
             viewAppeared = true
         }
-    }
-    
-    @objc private func load() {
-        refreshControl?.beginRefreshing()
-        feedLoader?.load { [weak self] result in
-            if let feed = try? result.get() {
-                self?.tableModel = feed
-                self?.tableView.reloadData()
-            }
-            self?.refreshControl?.endRefreshing()
-        }
-    }
-    
-    private func prepareForFirstAppearance() {
-        replaceRefreshControlWithFakeForiOS17PlusSupport()
-    }
-    
-    private func replaceRefreshControlWithFakeForiOS17PlusSupport() {
-        refreshControl = FakeUIRefreshControl()
-        refreshControl?.addTarget(self, action: #selector(load), for: .valueChanged)
     }
     
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -112,16 +97,3 @@ final public class FeedViewController: UITableViewController , UITableViewDataSo
     }
 }
 
-private class FakeUIRefreshControl: UIRefreshControl {
-    private var _isRefreshing = false
-    
-    override var isRefreshing: Bool { _isRefreshing }
-    
-    override func beginRefreshing() {
-        _isRefreshing = true
-    }
-    
-    override func endRefreshing() {
-        _isRefreshing = false
-    }
-}
