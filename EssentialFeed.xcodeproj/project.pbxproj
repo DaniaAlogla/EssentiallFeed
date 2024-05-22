@@ -401,6 +401,15 @@
 			path = "Feed API";
 			sourceTree = "<group>";
 		};
+		E6A788092BFDDEDC00AB09FD /* Feed Presentation  */ = {
+			isa = PBXGroup;
+			children = (
+				E6D5829E2BFB420F00AF3049 /* FeedViewModel.swift */,
+				E65E49F32BFC7B73002D9DB6 /* FeedImageViewModel.swift */,
+			);
+			path = "Feed Presentation ";
+			sourceTree = "<group>";
+		};
 		E6AB745A2BF9CCF200C8C0E7 /* Feed Image Loader */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,7 +421,6 @@
 		E6AB745E2BF9CD7C00C8C0E7 /* Feed UI */ = {
 			isa = PBXGroup;
 			children = (
-				E6D5829D2BFB420300AF3049 /* Models */,
 				E6AB74652BF9D95F00C8C0E7 /* Composers */,
 				E6AB745F2BF9CD8D00C8C0E7 /* Controllers */,
 				E6AB74602BF9CD9800C8C0E7 /* Views */,
@@ -450,6 +458,7 @@
 		E6CD59642BBAF70F005B9182 /* EssentialFeediOS */ = {
 			isa = PBXGroup;
 			children = (
+				E6A788092BFDDEDC00AB09FD /* Feed Presentation  */,
 				E6AB745A2BF9CCF200C8C0E7 /* Feed Image Loader */,
 				E6AB745E2BF9CD7C00C8C0E7 /* Feed UI */,
 				E6CD59662BBAF70F005B9182 /* EssentialFeediOS.docc */,
@@ -463,15 +472,6 @@
 				E6DBEEE32BD4A38E00A72E8B /* FeedViewControllerTests.swift */,
 			);
 			path = EssentialFeediOSTests;
-			sourceTree = "<group>";
-		};
-		E6D5829D2BFB420300AF3049 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				E6D5829E2BFB420F00AF3049 /* FeedViewModel.swift */,
-				E65E49F32BFC7B73002D9DB6 /* FeedImageViewModel.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		E6DBEEE52BD4A41500A72E8B /* Frameworks */ = {
@@ -977,6 +977,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1035,6 +1036,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -1168,7 +1170,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1208,7 +1210,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1242,7 +1244,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dania.EssentialFeediOSTests;
@@ -1268,7 +1270,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dania.EssentialFeediOSTests;
