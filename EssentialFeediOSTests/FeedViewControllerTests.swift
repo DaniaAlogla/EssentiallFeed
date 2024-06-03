@@ -29,8 +29,7 @@ final class FeedViewControllerTests: XCTestCase {
     func test_loadingFeedIndicator_isVisibleWhileLoadingFeed() {
         let (sut, loader) = makeSUT()
         
-        sut.beginAppearanceTransition(true, animated: false) // viewWillAppear
-        sut.endAppearanceTransition() // viewIsAppearing _ viewDidAppear
+        sut.simulateAppearance()
         XCTAssertTrue(sut.isShowingLoadingIndicator, "Expexted loading indicator once view is loaded")
 
         loader.completeFeedLoading(at: 0)
@@ -360,6 +359,26 @@ private extension FeedViewController {
         refreshControl?.simulatePullToRefresh()
     }
     
+    func simulateAppearance() {
+        if !isViewLoaded {
+            loadViewIfNeeded()
+            replaceRefreshControlWithFakeForiOS17Support()
+        }
+        beginAppearanceTransition(true, animated: false)
+        endAppearanceTransition()
+    }
+    
+    func replaceRefreshControlWithFakeForiOS17Support() {
+        let fake = FakeUIRefreshControl()
+        refreshControl?.allTargets.forEach { target in
+            refreshControl?.actions(forTarget: target, forControlEvent: .valueChanged)?.forEach { action in
+                fake.addTarget(target, action: Selector(action), for: .valueChanged)
+            }
+        }
+        refreshControl = fake
+        refreshController?.view = fake
+    }
+    
     @discardableResult
     func simulateFeedImageViewVisible(at index: Int) -> FeedImageCell? {
         return feedImageView(at: index) as? FeedImageCell
@@ -437,5 +456,19 @@ private extension UIImage {
             color.setFill()
             rendererContext.fill(rect)
         }
+    }
+}
+
+private class FakeUIRefreshControl: UIRefreshControl {
+    private var _isRefreshing = false
+    
+    override var isRefreshing: Bool { _isRefreshing }
+    
+    override func beginRefreshing() {
+        _isRefreshing = true
+    }
+    
+    override func endRefreshing() {
+        _isRefreshing = false
     }
 }

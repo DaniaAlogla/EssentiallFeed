@@ -32,23 +32,5 @@ final class FeedRefershViewController: NSObject, FeedLoadingView {
         }
     }
     
-    private func loadView() -> UIRefreshControl {
-        let view = FakeUIRefreshControl()
-        view.addTarget(self, action: #selector(refresh), for: .valueChanged)
-        return view
-    }
 }
 
-private class FakeUIRefreshControl: UIRefreshControl {
-    private var _isRefreshing = false
-    
-    override var isRefreshing: Bool { _isRefreshing }
-    
-    override func beginRefreshing() {
-        _isRefreshing = true
-    }
-    
-    override func endRefreshing() {
-        _isRefreshing = false
-    }
-}
