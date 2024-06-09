@@ -18,7 +18,7 @@ final class FeedViewControllerTests: XCTestCase {
         
         sut.loadViewIfNeeded()
         XCTAssertEqual(loader.loadFeedCallCount, 1, "Expexted a loading request once view is loaded")
-  
+        
         sut.simulateUserInitiatedFeedReload()
         XCTAssertEqual(loader.loadFeedCallCount, 2, "Expected another loading request once user initiates a load")
         
@@ -31,13 +31,13 @@ final class FeedViewControllerTests: XCTestCase {
         
         sut.simulateAppearance()
         XCTAssertTrue(sut.isShowingLoadingIndicator, "Expexted loading indicator once view is loaded")
-
+        
         loader.completeFeedLoading(at: 0)
         XCTAssertFalse(sut.isShowingLoadingIndicator, "Expected no loading indicator once loading completes successfully")
-
+        
         sut.simulateUserInitiatedFeedReload()
         XCTAssertTrue(sut.isShowingLoadingIndicator, "Expexted loading indicator once user initiates a reload")
-
+        
         loader.completeFeedLoadingWithError(at: 1)
         XCTAssertFalse(sut.isShowingLoadingIndicator, "Expected no loading indicator once user initiated loading completes with error")
     }
@@ -47,7 +47,7 @@ final class FeedViewControllerTests: XCTestCase {
         let image1 = makeImage(description: nil , location: "another location")
         let image2 = makeImage(description: "another description", location: nil)
         let image3 = makeImage(description: nil, location: nil)
-
+        
         let (sut, loader) = makeSUT()
         
         sut.loadViewIfNeeded()
@@ -55,7 +55,7 @@ final class FeedViewControllerTests: XCTestCase {
         
         loader.completeFeedLoading(with: [image0], at: 0)
         assertThat(sut, isRendering: [image0])
-
+        
         
         sut.simulateUserInitiatedFeedReload()
         loader.completeFeedLoading(with: [image0,image1,image2,image3], at: 1)
@@ -193,7 +193,7 @@ final class FeedViewControllerTests: XCTestCase {
         let image0 = makeImage(url: URL(string: "http://url-0.com")!)
         let image1 = makeImage(url: URL(string: "http://url-1.com")!)
         let (sut, loader) = makeSUT()
-
+        
         sut.loadViewIfNeeded()
         loader.completeFeedLoading(with: [image0,image1])
         
@@ -208,7 +208,7 @@ final class FeedViewControllerTests: XCTestCase {
         
         view0?.simulateRetryAction()
         XCTAssertEqual(loader.loadedImageURLs, [image0.url, image1.url, image0.url], "Expected third imageURL requests after first view restry action")
-
+        
         view1?.simulateRetryAction()
         XCTAssertEqual(loader.loadedImageURLs, [image0.url, image1.url, image0.url, image1.url], "Expected forth imageURL requests after second view restry action")
     }
@@ -227,7 +227,18 @@ final class FeedViewControllerTests: XCTestCase {
         
         sut.simulateFeedImageViewNearVisible(at: 1)
         XCTAssertEqual(loader.loadedImageURLs, [image0.url, image1.url], "Expected second image URL request once second image is near visible")
-
+        
+    }
+    
+    func test_feedImageView_doesNotRenderLoadedImageWhenNotVisibleAnymore() {
+        let (sut, loader) = makeSUT()
+        sut.loadViewIfNeeded()
+        loader.completeFeedLoading(with: [makeImage()])
+        
+        let view = sut.simulateFeedImageViewNotVisible(at: 0)
+        loader.completeImageLoading(with: anyImageData())
+        
+        XCTAssertNil(view?.renderedImage, "Expected no rendered image when an image load finishes after the view is not visible anymore")
     }
     // MARK: - Helpers
     
@@ -237,6 +248,10 @@ final class FeedViewControllerTests: XCTestCase {
         trackForMemoryLeaks(sut, file: file, line: line)
         trackForMemoryLeaks(loader, file: file, line: line)
         return (sut, loader)
+    }
+    
+    private func anyImageData() -> Data {
+        return UIImage.make(withColor: .red).pngData()!
     }
     
     private func assertThat(_ sut: FeedViewController, isRendering feed: [FeedImage], file: StaticString = #file, line: UInt = #line) {
@@ -269,9 +284,9 @@ final class FeedViewControllerTests: XCTestCase {
     }
     
     class LoaderSpy: FeedLoader, FeedImageDataLoader {
-
+        
         private var feedRequests = [(FeedLoader.Result) -> Void]()
-                
+        
         var loadFeedCallCount : Int {
             return feedRequests.count
         }
@@ -383,12 +398,15 @@ private extension FeedViewController {
         return feedImageView(at: index) as? FeedImageCell
     }
     
-    func simulateFeedImageViewNotVisible(at row: Int) {
+    @discardableResult
+    func simulateFeedImageViewNotVisible(at row: Int) -> FeedImageCell? {
         let view = simulateFeedImageViewVisible(at: row)
         
         let delegate = tableView.delegate
         let index = IndexPath(row: row, section: feedImageSection)
         delegate?.tableView?(tableView, didEndDisplaying: view!, forRowAt: index)
+        
+        return view 
     }
     
     func simulateFeedImageViewNearVisible(at row: Int) {
@@ -449,7 +467,7 @@ private extension UIImage {
         let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
         let format = UIGraphicsImageRendererFormat()
         format.scale = 1
-
+        
         return UIGraphicsImageRenderer(size: rect.size,
                                        format: format).image { rendererContext in
             color.setFill()
